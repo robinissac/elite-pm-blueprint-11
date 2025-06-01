@@ -1,4 +1,6 @@
 
+import { Link } from "react-router-dom";
+
 const Index = () => {
   return (
     <div className="min-h-screen">
@@ -328,8 +330,13 @@ const Index = () => {
       <header className="header">
         <div className="container">
           <div className="header-content">
-            <a href="#" className="logo">RI</a>
-            <a href="#" className="nav-link">Read the AI PM Letters</a>
+            <Link to="/" className="logo">RI</Link>
+            <nav className="nav-menu">
+              <Link to="/about" className="nav-link">About</Link>
+              <Link to="/services" className="nav-link">Services</Link>
+              <Link to="/contact" className="nav-link">Contact Us</Link>
+              <Link to="#" className="nav-link">Read the AI PM Letters</Link>
+            </nav>
           </div>
         </div>
       </header>
