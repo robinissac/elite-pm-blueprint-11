@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 
 const Contact = () => {
@@ -52,11 +51,27 @@ const Contact = () => {
           color: #ccc;
           text-decoration: none;
           font-size: 14px;
-          transition: color 0.3s ease;
+          padding: 8px 16px;
+          border-radius: 6px;
+          transition: all 0.3s ease;
+          border: 1px solid transparent;
         }
 
         .nav-link:hover {
           color: #fff;
+          background: #111;
+          border-color: #333;
+        }
+
+        .nav-link.primary {
+          background: #D2B48C;
+          color: #000;
+          font-weight: 600;
+        }
+
+        .nav-link.primary:hover {
+          background: #C19A6B;
+          border-color: #C19A6B;
         }
 
         .page-hero {
@@ -262,7 +277,7 @@ const Contact = () => {
               <Link to="/about" className="nav-link">About</Link>
               <Link to="/services" className="nav-link">Services</Link>
               <Link to="/contact" className="nav-link">Contact Us</Link>
-              <Link to="#" className="nav-link">Read the AI PM Letters</Link>
+              <Link to="#" className="nav-link primary">Read the AI PM Letters</Link>
             </nav>
           </div>
         </div>
