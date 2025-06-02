@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 
 const Contact = () => {
@@ -277,7 +278,7 @@ const Contact = () => {
               <Link to="/about" className="nav-link">About</Link>
               <Link to="/services" className="nav-link">Services</Link>
               <Link to="/contact" className="nav-link">Contact Us</Link>
-              <Link to="#" className="nav-link primary">Read the AI PM Letters</Link>
+              <Link to="/ai-pm-letters" className="nav-link primary">Read the AI PM Letters</Link>
             </nav>
           </div>
         </div>
@@ -302,7 +303,7 @@ const Contact = () => {
               
               <div className="contact-item">
                 <div className="contact-item-icon">@</div>
-                <span>robin@elitepmacademy.com</span>
+                <span>robin@robinissac.com</span>
               </div>
               
               <div className="contact-item">
@@ -351,8 +352,8 @@ const Contact = () => {
       <footer className="footer">
         <div className="container">
           <div className="social-links">
-            <a href="#" className="social-link">LinkedIn: robinissac</a>
-            <a href="#" className="social-link">YouTube: @RobinIssac007-AI-PM</a>
+            <a href="https://linkedin.com/in/robinissac" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn: robinissac</a>
+            <a href="https://youtube.com/@RobinIssac007-AI-PM" target="_blank" rel="noopener noreferrer" className="social-link">YouTube: @RobinIssac007-AI-PM</a>
           </div>
           <p className="footer-text">Built by Robin Issac. Execution is your superpower.</p>
         </div>

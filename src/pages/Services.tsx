@@ -280,7 +280,7 @@ const Services = () => {
               <Link to="/about" className="nav-link">About</Link>
               <Link to="/services" className="nav-link">Services</Link>
               <Link to="/contact" className="nav-link">Contact Us</Link>
-              <Link to="#" className="nav-link primary">Read the AI PM Letters</Link>
+              <Link to="/ai-pm-letters" className="nav-link primary">Read the AI PM Letters</Link>
             </nav>
           </div>
         </div>
@@ -310,7 +310,7 @@ const Services = () => {
                 <li>Leadership psychology training</li>
                 <li>Unlimited email support</li>
               </ul>
-              <div className="service-price">$2,500/month</div>
+              <div className="service-price">$100</div>
               <a href="#" className="service-button">Get Started</a>
             </div>
 
@@ -326,7 +326,7 @@ const Services = () => {
                 <li>Team training included</li>
                 <li>6-month follow-up support</li>
               </ul>
-              <div className="service-price">$7,500</div>
+              <div className="service-price">$100</div>
               <a href="#" className="service-button">Transform Now</a>
             </div>
 
@@ -342,7 +342,7 @@ const Services = () => {
                 <li>Process optimization</li>
                 <li>Quarterly strategy reviews</li>
               </ul>
-              <div className="service-price">$15,000+</div>
+              <div className="service-price">$100</div>
               <a href="#" className="service-button">Discuss Project</a>
             </div>
 
@@ -358,8 +358,24 @@ const Services = () => {
                 <li>Guest expert sessions</li>
                 <li>Private community access</li>
               </ul>
-              <div className="service-price">$997/month</div>
+              <div className="service-price">$100</div>
               <a href="#" className="service-button">Join Mastermind</a>
+            </div>
+
+            {/* New Service 5 - Monthly Subscription */}
+            <div className="service-card">
+              <div className="service-icon">💎</div>
+              <h3>Premium Monthly Access</h3>
+              <p>Monthly subscription to access all premium content, AI PM letters archive, templates, and exclusive resources.</p>
+              <ul className="service-features">
+                <li>All AI PM letters archive</li>
+                <li>Premium templates library</li>
+                <li>Monthly live Q&A sessions</li>
+                <li>Exclusive resource downloads</li>
+                <li>Community forum access</li>
+              </ul>
+              <div className="service-price">$1/month</div>
+              <a href="#" className="service-button">Subscribe Now</a>
             </div>
           </div>
 
@@ -376,8 +392,8 @@ const Services = () => {
       <footer className="footer">
         <div className="container">
           <div className="social-links">
-            <a href="#" className="social-link">LinkedIn: robinissac</a>
-            <a href="#" className="social-link">YouTube: @RobinIssac007-AI-PM</a>
+            <a href="https://linkedin.com/in/robinissac" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn: robinissac</a>
+            <a href="https://youtube.com/@RobinIssac007-AI-PM" target="_blank" rel="noopener noreferrer" className="social-link">YouTube: @RobinIssac007-AI-PM</a>
           </div>
           <p className="footer-text">Built by Robin Issac. Execution is your superpower.</p>
         </div>
