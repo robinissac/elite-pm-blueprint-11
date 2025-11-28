@@ -1,5 +1,4 @@
-
-import { Link } from "react-router-dom";
+ import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -370,7 +369,15 @@ const Index = () => {
           <p>Robin Issac helps professionals transform into execution-first project managers using AI workflows, delivery excellence, and psychological mastery.</p>
           <div className="email-form">
             <input type="email" className="email-input" placeholder="Enter your email address" />
-            <button className="cta-button">Join the Movement</button>
+            {/* Updated CTA to direct WhatsApp link */}
+            <a
+              href="https://chat.whatsapp.com/BVUSqeP38TeLholBLRrkY1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-button"
+            >
+              Join the Free WhatsApp Session
+            </a>
           </div>
         </div>
       </section>
