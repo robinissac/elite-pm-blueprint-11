@@ -1,4 +1,6 @@
- import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+const WHATSAPP_LINK = "https://chat.whatsapp.com/BVUSqeP38TeLholBLRrkY1";
 
 const Index = () => {
   return (
@@ -92,33 +94,21 @@ const Index = () => {
         .hero p {
           font-size: clamp(18px, 2.5vw, 24px);
           color: #ccc;
-          margin-bottom: 48px;
+          margin-bottom: 32px;
           max-width: 700px;
           margin-left: auto;
           margin-right: auto;
         }
 
-        .email-form {
+        .hero-note {
+          font-size: 14px;
+          color: #aaa;
+          margin-top: 12px;
+        }
+
+        .hero-cta-wrapper {
           display: flex;
-          gap: 16px;
-          max-width: 500px;
-          margin: 0 auto;
-          flex-wrap: wrap;
-        }
-
-        .email-input {
-          flex: 1;
-          min-width: 250px;
-          padding: 16px 20px;
-          background: #111;
-          border: 1px solid #333;
-          border-radius: 8px;
-          color: #fff;
-          font-size: 16px;
-        }
-
-        .email-input::placeholder {
-          color: #666;
+          justify-content: center;
         }
 
         .cta-button {
@@ -226,7 +216,7 @@ const Index = () => {
           border: 1px solid #333;
           border-radius: 12px;
           padding: 40px;
-          text-align: center;
+          text-align: left;
           transition: all 0.3s ease;
         }
 
@@ -236,16 +226,67 @@ const Index = () => {
         }
 
         .product-mockup {
-          width: 100%;
-          height: 200px;
-          background: linear-gradient(135deg, #333 0%, #111 100%);
-          border-radius: 8px;
-          margin-bottom: 24px;
+          width: 52px;
+          height: 52px;
+          border-radius: 16px;
+          background: #D2B48C22;
           display: flex;
           align-items: center;
           justify-content: center;
-          font-size: 18px;
-          color: #666;
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
+
+        .price-row {
+          display: flex;
+          align-items: baseline;
+          gap: 8px;
+          margin-top: 8px;
+        }
+
+        .price {
+          font-size: 24px;
+          font-weight: 700;
+        }
+
+        .price-old {
+          font-size: 14px;
+          color: #888;
+          text-decoration: line-through;
+        }
+
+        .badge {
+          display: inline-block;
+          padding: 4px 10px;
+          border-radius: 999px;
+          background: #201910;
+          color: #f5d7a1;
+          font-size: 12px;
+          margin-bottom: 12px;
+        }
+
+        .limited-note {
+          font-size: 13px;
+          color: #fbbf77;
+          margin-top: 8px;
+        }
+
+        .product-list {
+          list-style: none;
+          padding-left: 0;
+          margin: 16px 0;
+          font-size: 14px;
+          color: #ccc;
+        }
+
+        .product-list li {
+          margin-bottom: 6px;
+        }
+
+        .consult-note {
+          font-size: 13px;
+          color: #ccc;
+          margin-top: 8px;
         }
 
         .blog-card {
@@ -327,15 +368,6 @@ const Index = () => {
             padding: 60px 0;
           }
 
-          .email-form {
-            flex-direction: column;
-            align-items: center;
-          }
-
-          .email-input {
-            min-width: 100%;
-          }
-
           .section {
             padding: 60px 0;
           }
@@ -351,12 +383,22 @@ const Index = () => {
       <header className="header">
         <div className="container">
           <div className="header-content">
-            <Link to="/" className="logo">RI</Link>
+            <Link to="/" className="logo">
+              RI
+            </Link>
             <nav className="nav-menu">
-              <Link to="/about" className="nav-link">About</Link>
-              <Link to="/services" className="nav-link">Services</Link>
-              <Link to="/contact" className="nav-link">Contact Us</Link>
-              <Link to="/ai-pm-letters" className="nav-link primary">Read the AI PM Letters</Link>
+              <Link to="/about" className="nav-link">
+                About
+              </Link>
+              <Link to="/services" className="nav-link">
+                Services
+              </Link>
+              <Link to="/contact" className="nav-link">
+                Contact Us
+              </Link>
+              <Link to="/ai-pm-letters" className="nav-link primary">
+                Read the AI PM Letters
+              </Link>
             </nav>
           </div>
         </div>
@@ -365,69 +407,171 @@ const Index = () => {
       {/* Hero Section */}
       <section className="hero">
         <div className="container">
-          <h1>Build, Lead, and Scale with AI-Enhanced Project Leadership</h1>
-          <p>Robin Issac helps professionals transform into execution-first project managers using AI workflows, delivery excellence, and psychological mastery.</p>
-          <div className="email-form">
-            <input type="email" className="email-input" placeholder="Enter your email address" />
-            {/* Updated CTA to direct WhatsApp link */}
-            <a
-              href="https://chat.whatsapp.com/BVUSqeP38TeLholBLRrkY1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cta-button"
-            >
+          <h1>Build, Lead, and Scale with AI Enhanced Project Leadership</h1>
+          <p>
+            Join Robin Issac in a free 80 minute WhatsApp session on AI powered project management. Learn how to
+            execute projects with clarity, speed, and psychological strength.
+          </p>
+          <div className="hero-cta-wrapper">
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="cta-button">
               Join the Free WhatsApp Session
             </a>
           </div>
+          <p className="hero-note">
+            All updates, links, and offers are shared inside this single WhatsApp group so you stay in one focused place.
+          </p>
         </div>
       </section>
 
-      {/* Resource/Offer Grid */}
+      {/* What you will get */}
       <section className="section">
         <div className="container">
-          <h2 className="section-title">Join the New 1%</h2>
-          <p className="section-subtitle">Future-proof your career with these tools</p>
+          <h2 className="section-title">What you build with Elite PM</h2>
+          <p className="section-subtitle">Four pillars that support your growth as an execution first project leader.</p>
           <div className="grid grid-4">
             <div className="card">
-              <h3>Elite PM Academy</h3>
-              <p>Master advanced project management frameworks and AI-powered methodologies for elite performance.</p>
-              <a href="#" className="card-button">Learn More</a>
+              <h3>Elite PM Foundations</h3>
+              <p>Plan projects with confidence using PMI aligned structures that work in real IT and banking environments.</p>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="card-button">
+                Learn in the WhatsApp workshop
+              </a>
             </div>
             <div className="card">
-              <h3>AI Tools Bootcamp</h3>
-              <p>Discover cutting-edge AI tools and workflows that multiply your productivity and decision-making power.</p>
-              <a href="#" className="card-button">Learn More</a>
+              <h3>AI Workflows</h3>
+              <p>Use practical AI prompts and tools to speed up planning, risk analysis, and communication without losing control.</p>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="card-button">
+                Get AI workflow examples
+              </a>
             </div>
             <div className="card">
-              <h3>Career Clarity Masterclass</h3>
-              <p>Get crystal clear on your professional path with strategic positioning and personal brand development.</p>
-              <a href="#" className="card-button">Learn More</a>
+              <h3>Leadership Psychology</h3>
+              <p>Build mental models and communication habits that keep teams calm, clear, and accountable even in pressure.</p>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="card-button">
+                Join the live Q and A
+              </a>
             </div>
             <div className="card">
-              <h3>Self-Leadership Lab</h3>
-              <p>Build unshakeable mental models and psychological frameworks for sustained high performance.</p>
-              <a href="#" className="card-button">Learn More</a>
+              <h3>Career Positioning</h3>
+              <p>Position yourself as an Elite PM who can lead AI driven change programs, not just deliver tasks.</p>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="card-button">
+                Ask Robin in the group
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Featured Products */}
+      {/* Core programs and offers */}
       <section className="section">
         <div className="container">
-          <h2 className="section-title">Featured Resources</h2>
+          <h2 className="section-title">Programs and limited time offers</h2>
+          <p className="section-subtitle">
+            Start with the free WhatsApp session. When you are ready to go deeper, choose one of these paths. All enrollments
+            and questions flow through the same WhatsApp group.
+          </p>
+
           <div className="grid grid-2">
+            {/* 9 Mission self paced */}
             <div className="product-card">
-              <div className="product-mockup">📋 Resume Guide</div>
-              <h3>Resume & Positioning Guide</h3>
-              <p>Stand out from the crowd with a strategic resume that positions you as an elite project leader.</p>
-              <button className="cta-button">Get Access</button>
+              <span className="badge">Starter program</span>
+              <div className="product-mockup">🎯</div>
+              <h3>Self Paced 9 Mission Video Program</h3>
+              <p>
+                Bite sized missions that teach you how to behave like an Elite Project Manager in real work situations.
+                Designed for busy professionals who want a quick but solid start.
+              </p>
+              <ul className="product-list">
+                <li>9 self paced video missions.</li>
+                <li>Checklists and templates you can reuse.</li>
+                <li>AI prompts for planning, risk, and communication.</li>
+              </ul>
+              <div className="price-row">
+                <span className="price">9 USD</span>
+              </div>
+              <p className="limited-note">Best first step after you attend the free WhatsApp session.</p>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="cta-button">
+                Get link inside WhatsApp
+              </a>
             </div>
+
+            {/* Lifetime membership */}
             <div className="product-card">
-              <div className="product-mockup">🤖 AI Templates</div>
-              <h3>AI-Powered PM Templates</h3>
-              <p>Ready-to-use templates and prompts that streamline your project management workflows with AI.</p>
-              <button className="cta-button">Get Access</button>
+              <span className="badge">50 percent launch offer</span>
+              <div className="product-mockup">🏆</div>
+              <h3>Elite PM Academy Lifetime Membership</h3>
+              <p>
+                One time payment for lifetime access to the Elite PM community, new missions, live calls, and AI resource
+                library. Ideal for serious professionals who want long term support.
+              </p>
+              <ul className="product-list">
+                <li>Lifetime access to member only content and future updates.</li>
+                <li>Monthly live calls for Q and A and hot seat reviews.</li>
+                <li>Expanded AI PM toolkit with workflows and real project case studies.</li>
+              </ul>
+              <div className="price-row">
+                <span className="price">100 USD</span>
+                <span className="price-old">200 USD</span>
+              </div>
+              <p className="limited-note">
+                Current launch price is 50 percent off the original 200 USD. Mentioned only inside the WhatsApp community.
+              </p>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="cta-button">
+                Claim offer inside WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <div className="grid grid-2" style={{ marginTop: "40px" }}>
+            {/* Mastermind or group */}
+            <div className="product-card">
+              <span className="badge">Group track</span>
+              <div className="product-mockup">🤝</div>
+              <h3>Elite PM Mastermind</h3>
+              <p>
+                Small group container for ambitious project managers who want feedback, accountability, and peer learning
+                while they execute real projects.
+              </p>
+              <ul className="product-list">
+                <li>Monthly group calls with case reviews.</li>
+                <li>Peer support and networking with other PMs.</li>
+                <li>Focus on implementation rather than theory.</li>
+              </ul>
+              <div className="price-row">
+                <span className="price">100 USD</span>
+                <span className="price-old">200 USD</span>
+              </div>
+              <p className="limited-note">
+                Limited seats each cycle. Early members lock this 50 percent rate while it is available.
+              </p>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="cta-button">
+                Apply through WhatsApp
+              </a>
+            </div>
+
+            {/* Consulting */}
+            <div className="product-card">
+              <span className="badge">For companies and founders</span>
+              <div className="product-mockup">📊</div>
+              <h3>Executive PM Consulting</h3>
+              <p>
+                Strategic consulting for organizations that want to upgrade their project management capability, align
+                teams, and integrate AI into their delivery systems.
+              </p>
+              <ul className="product-list">
+                <li>Assessment of current PM practices and gaps.</li>
+                <li>Design of PM and AI PM frameworks tailored to your context.</li>
+                <li>Leadership and team training sessions.</li>
+              </ul>
+              <div className="price-row">
+                <span className="price">1 000 USD</span>
+              </div>
+              <p className="consult-note">
+                Final pricing and scope is confirmed after a short WhatsApp or Zoom conversation. Contact Robin through the
+                WhatsApp group for a better custom deal.
+              </p>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="cta-button">
+                Discuss project on WhatsApp
+              </a>
             </div>
           </div>
         </div>
@@ -437,30 +581,39 @@ const Index = () => {
       <section className="section">
         <div className="container">
           <h2 className="section-title">Explore Your Curiosity</h2>
-          <p className="section-subtitle">Deep dives into human potential, PM leadership, and AI execution</p>
+          <p className="section-subtitle">
+            Deep dives into human potential, PM leadership, and AI execution. Articles and lessons are announced inside the
+            WhatsApp group.
+          </p>
           <div className="grid grid-3">
             <div className="blog-card">
-              <div className="blog-graphic">AI & Leadership</div>
+              <div className="blog-graphic">AI and Leadership</div>
               <div className="blog-content">
                 <h3>The Future of Project Leadership</h3>
-                <p>How AI is reshaping the role of project managers and what skills matter most in the next decade.</p>
-                <a href="#" className="card-button">Read More</a>
+                <p>How AI is changing the PM role and the skills that will protect your career in the next decade.</p>
+                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="card-button">
+                  Get link inside WhatsApp
+                </a>
               </div>
             </div>
             <div className="blog-card">
               <div className="blog-graphic">Psychology</div>
               <div className="blog-content">
                 <h3>Mental Models for Execution</h3>
-                <p>Psychological frameworks that transform how you approach complex projects and decision-making.</p>
-                <a href="#" className="card-button">Read More</a>
+                <p>Simple psychological tools that help you stay calm, plan clearly, and move teams into action.</p>
+                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="card-button">
+                  Ask for this topic
+                </a>
               </div>
             </div>
             <div className="blog-card">
               <div className="blog-graphic">Strategy</div>
               <div className="blog-content">
                 <h3>Building Your PM Brand</h3>
-                <p>Strategic positioning techniques that elevate your professional reputation and career trajectory.</p>
-                <a href="#" className="card-button">Read More</a>
+                <p>How to position yourself as a PM who can lead AI projects, not just track tasks in a tool.</p>
+                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="card-button">
+                  Get updates in WhatsApp
+                </a>
               </div>
             </div>
           </div>
@@ -471,8 +624,22 @@ const Index = () => {
       <footer className="footer">
         <div className="container">
           <div className="social-links">
-            <a href="https://linkedin.com/in/robinissac" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn: robinissac</a>
-            <a href="https://youtube.com/@RobinIssac007-AI-PM" target="_blank" rel="noopener noreferrer" className="social-link">YouTube: @RobinIssac007-AI-PM</a>
+            <a
+              href="https://linkedin.com/in/robinissac"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+            >
+              LinkedIn: robinissac
+            </a>
+            <a
+              href="https://youtube.com/@RobinIssac007-AI-PM"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+            >
+              YouTube: @RobinIssac007 AI PM
+            </a>
           </div>
           <p className="footer-text">Built by Robin Issac. Execution is your superpower.</p>
         </div>
