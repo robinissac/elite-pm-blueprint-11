@@ -1,16 +1,11 @@
-
-import { Link } from "react-router-dom";
+ import { Link } from "react-router-dom";
 
 const Contact = () => {
+  const WHATSAPP_LINK = "https://chat.whatsapp.com/BVUSqeP38TeLholBLRrkY1";
+
   return (
     <div className="min-h-screen">
       <style>{`
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
-
         body {
           font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
           background-color: #000;
@@ -75,149 +70,142 @@ const Contact = () => {
           border-color: #C19A6B;
         }
 
-        .page-hero {
-          padding: 80px 0 60px;
+        .page-section {
+          padding: 80px 0;
+        }
+
+        .page-title {
           text-align: center;
-        }
-
-        .page-hero h1 {
-          font-size: clamp(32px, 4vw, 48px);
+          font-size: clamp(28px, 4vw, 40px);
           font-weight: 700;
-          margin-bottom: 16px;
+          margin-bottom: 8px;
         }
 
-        .page-hero p {
-          font-size: clamp(16px, 2vw, 20px);
+        .page-subtitle {
+          text-align: center;
           color: #ccc;
-          max-width: 600px;
-          margin: 0 auto;
-        }
-
-        .contact-section {
-          padding: 60px 0 80px;
+          font-size: 16px;
+          margin-bottom: 48px;
         }
 
         .contact-grid {
           display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 60px;
-          align-items: start;
+          grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+          gap: 40px;
+          align-items: flex-start;
         }
 
-        .contact-info h2 {
-          font-size: 28px;
-          font-weight: 600;
-          margin-bottom: 24px;
+        .contact-panel {
+          background: #050505;
+          padding: 32px;
+          border-radius: 16px;
+          border: 1px solid #222;
         }
 
-        .contact-info p {
-          color: #ccc;
-          margin-bottom: 32px;
-          font-size: 16px;
-          line-height: 1.6;
+        .contact-panel h3 {
+          font-size: 22px;
+          margin-bottom: 12px;
         }
 
-        .contact-item {
-          display: flex;
-          align-items: center;
-          margin-bottom: 20px;
-        }
-
-        .contact-item-icon {
-          width: 20px;
-          height: 20px;
-          background: #D2B48C;
-          border-radius: 50%;
-          margin-right: 16px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 12px;
-          color: #000;
-          font-weight: 600;
-        }
-
-        .contact-item span {
-          color: #fff;
-          font-size: 16px;
-        }
-
-        .contact-form {
-          background: #111;
-          border: 1px solid #333;
-          border-radius: 12px;
-          padding: 40px;
-        }
-
-        .contact-form h2 {
-          font-size: 24px;
-          font-weight: 600;
-          margin-bottom: 24px;
-        }
-
-        .form-group {
-          margin-bottom: 24px;
-        }
-
-        .form-group label {
-          display: block;
+        .contact-panel p {
           color: #ccc;
           font-size: 14px;
+          margin-bottom: 16px;
+        }
+
+        .contact-list {
+          list-style: none;
+          padding-left: 0;
+          margin-top: 8px;
+          color: #ccc;
+          font-size: 14px;
+        }
+
+        .contact-list li {
           margin-bottom: 8px;
-          font-weight: 500;
         }
 
-        .form-group input,
-        .form-group textarea {
+        .contact-tag {
+          display: inline-block;
+          padding: 4px 10px;
+          border-radius: 999px;
+          background: #201910;
+          color: #f5d7a1;
+          font-size: 12px;
+          margin-top: 8px;
+        }
+
+        .form-card {
+          background: #101010;
+          padding: 32px;
+          border-radius: 16px;
+          border: 1px solid #222;
+        }
+
+        .form-row {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          margin-bottom: 16px;
+        }
+
+        .form-label {
+          font-size: 14px;
+          color: #ddd;
+        }
+
+        .form-input,
+        .form-textarea {
           width: 100%;
-          padding: 16px 20px;
-          background: #000;
-          border: 1px solid #333;
+          padding: 12px 14px;
           border-radius: 8px;
+          border: 1px solid #333;
+          background: #050505;
           color: #fff;
-          font-size: 16px;
-          font-family: inherit;
-          transition: border-color 0.3s ease;
+          font-size: 14px;
         }
 
-        .form-group input:focus,
-        .form-group textarea:focus {
-          outline: none;
-          border-color: #D2B48C;
-        }
-
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
+        .form-input::placeholder,
+        .form-textarea::placeholder {
           color: #666;
         }
 
-        .form-group textarea {
+        .form-textarea {
+          min-height: 140px;
           resize: vertical;
-          min-height: 120px;
         }
 
-        .submit-button {
+        .cta-button {
           background: #D2B48C;
           color: #000;
-          padding: 16px 32px;
+          padding: 14px 28px;
           border: none;
           border-radius: 8px;
-          font-size: 16px;
+          font-size: 15px;
           font-weight: 600;
           cursor: pointer;
           transition: all 0.3s ease;
-          width: 100%;
+          text-decoration: none;
+          display: inline-block;
+          text-align: center;
         }
 
-        .submit-button:hover {
+        .cta-button:hover {
           background: #C19A6B;
-          transform: translateY(-2px);
+          transform: translateY(-1px);
+        }
+
+        .helper-note {
+          font-size: 12px;
+          color: #888;
+          margin-top: 8px;
         }
 
         .footer {
           padding: 60px 0 40px;
           border-top: 1px solid #333;
           text-align: center;
+          margin-top: 40px;
         }
 
         .social-links {
@@ -243,23 +231,20 @@ const Contact = () => {
           font-size: 14px;
         }
 
+        @media (max-width: 900px) {
+          .contact-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .page-section {
+            padding: 60px 0;
+          }
+        }
+
         @media (max-width: 768px) {
           .header-content {
             flex-direction: column;
             gap: 16px;
-          }
-
-          .nav-menu {
-            gap: 20px;
-          }
-
-          .contact-grid {
-            grid-template-columns: 1fr;
-            gap: 40px;
-          }
-
-          .contact-form {
-            padding: 24px;
           }
 
           .social-links {
@@ -284,64 +269,120 @@ const Contact = () => {
         </div>
       </header>
 
-      {/* Page Hero */}
-      <section className="page-hero">
+      {/* Contact content */}
+      <section className="page-section">
         <div className="container">
-          <h1>Contact Us</h1>
-          <p>Ready to transform your project management approach? Let's start the conversation about your path to elite execution.</p>
-        </div>
-      </section>
+          <h1 className="page-title">Contact Us</h1>
+          <p className="page-subtitle">
+            Ready to transform your project management approach. Share the basics here and we will take the next step
+            together.
+          </p>
 
-      {/* Contact Section */}
-      <section className="contact-section">
-        <div className="container">
           <div className="contact-grid">
-            {/* Contact Info */}
-            <div className="contact-info">
-              <h2>Get in Touch</h2>
-              <p>Whether you're looking to accelerate your PM career, integrate AI into your workflows, or build unshakeable leadership skills, I'm here to help you execute at an elite level.</p>
-              
-              <div className="contact-item">
-                <div className="contact-item-icon">@</div>
-                <span>robin@robinissac.com</span>
-              </div>
-              
-              <div className="contact-item">
-                <div className="contact-item-icon">📍</div>
-                <span>Available for virtual consultations worldwide</span>
-              </div>
-              
-              <div className="contact-item">
-                <div className="contact-item-icon">⏰</div>
-                <span>Response time: 24-48 hours</span>
-              </div>
+            {/* Left info panel */}
+            <div className="contact-panel">
+              <h3>Get in touch with Robin</h3>
+              <p>
+                Use this form for consulting, speaking, or partnership enquiries. For program questions or quick help
+                you can also join the WhatsApp group.
+              </p>
+              <ul className="contact-list">
+                <li>📧 Email. robin@robinissac.com</li>
+                <li>🌍 Virtual consultations for UAE and global clients.</li>
+                <li>⏱ Response time. usually within 24 to 48 hours.</li>
+              </ul>
+              <p className="contact-tag">
+                Faster response. DM inside the WhatsApp group.
+              </p>
+              <br />
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="cta-button">
+                Open WhatsApp Group
+              </a>
+              <p className="helper-note">
+                All offers, links, and workshop updates are coordinated through this group.
+              </p>
             </div>
 
-            {/* Contact Form */}
-            <div className="contact-form">
-              <h2>Send a Message</h2>
-              <form>
-                <div className="form-group">
-                  <label htmlFor="name">Full Name</label>
-                  <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+            {/* Right form card */}
+            <div className="form-card">
+              <h3 style={{ marginBottom: "16px" }}>Send a message</h3>
+              <p style={{ color: "#ccc", fontSize: "13px", marginBottom: "20px" }}>
+                This form uses FormSubmit to email your message to Robin directly. You will see a confirmation page
+                after you click Send.
+              </p>
+
+              {/* FormSubmit powered form */}
+              <form
+                action="https://formsubmit.co/robin@robinissac.com"
+                method="POST"
+              >
+                {/* Required hidden fields for FormSubmit */}
+                <input type="hidden" name="_subject" value="New enquiry from robinissac.com contact page" />
+                <input type="hidden" name="_captcha" value="false" />
+
+                <div className="form-row">
+                  <label className="form-label" htmlFor="fullName">
+                    Full name
+                  </label>
+                  <input
+                    id="fullName"
+                    name="Full Name"
+                    type="text"
+                    className="form-input"
+                    placeholder="Your name"
+                    required
+                  />
                 </div>
-                
-                <div className="form-group">
-                  <label htmlFor="email">Email Address</label>
-                  <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+
+                <div className="form-row">
+                  <label className="form-label" htmlFor="email">
+                    Email address
+                  </label>
+                  <input
+                    id="email"
+                    name="Email"
+                    type="email"
+                    className="form-input"
+                    placeholder="you@example.com"
+                    required
+                  />
                 </div>
-                
-                <div className="form-group">
-                  <label htmlFor="subject">Subject</label>
-                  <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
+
+                <div className="form-row">
+                  <label className="form-label" htmlFor="subject">
+                    Subject
+                  </label>
+                  <input
+                    id="subject"
+                    name="Subject"
+                    type="text"
+                    className="form-input"
+                    placeholder="Consulting, coaching, speaking, or other"
+                    required
+                  />
                 </div>
-                
-                <div className="form-group">
-                  <label htmlFor="message">Message</label>
-                  <textarea id="message" name="message" placeholder="Tell me about your current challenges and goals..." required></textarea>
+
+                <div className="form-row">
+                  <label className="form-label" htmlFor="message">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="Message"
+                    className="form-textarea"
+                    placeholder="Share a short summary of your project, challenge, or question."
+                    required
+                  />
                 </div>
-                
-                <button type="submit" className="submit-button">Send Message</button>
+
+                <button type="submit" className="cta-button">
+                  Send message
+                </button>
+
+                <p className="helper-note">
+                  After you click Send you will see a confirmation screen from FormSubmit. Then you can expect a reply in
+                  your inbox from Robin.
+                </p>
               </form>
             </div>
           </div>
@@ -352,8 +393,22 @@ const Contact = () => {
       <footer className="footer">
         <div className="container">
           <div className="social-links">
-            <a href="https://linkedin.com/in/robinissac" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn: robinissac</a>
-            <a href="https://youtube.com/@RobinIssac007-AI-PM" target="_blank" rel="noopener noreferrer" className="social-link">YouTube: @RobinIssac007-AI-PM</a>
+            <a
+              href="https://linkedin.com/in/robinissac"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+            >
+              LinkedIn. robinissac
+            </a>
+            <a
+              href="https://youtube.com/@RobinIssac007-AI-PM"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+            >
+              YouTube. @RobinIssac007 AI PM
+            </a>
           </div>
           <p className="footer-text">Built by Robin Issac. Execution is your superpower.</p>
         </div>
