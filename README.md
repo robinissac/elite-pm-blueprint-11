@@ -1,73 +1,58 @@
-# Welcome to your Lovable project
+# robinissac.com
 
-## Project info
+Source for robinissac.com — a Vite + React + TypeScript site styled with Tailwind CSS and shadcn/ui.
 
-**URL**: https://lovable.dev/projects/ca5415a9-35b0-44a4-a572-1e1bc51fcf6b
+Hosted on Netlify, building from the `main` branch on GitHub. Lovable is retired for this project — do not edit via Lovable.
 
-## How can I edit this code?
+## Getting started
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/ca5415a9-35b0-44a4-a572-1e1bc51fcf6b) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Requires Node.js 22 and npm.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The dev server runs with auto-reload at the URL printed in the terminal.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Scripts
 
-**Use GitHub Codespaces**
+- `npm run dev` — start the local dev server
+- `npm run build` — production build (output in `dist/`)
+- `npm run build:dev` — development-mode build
+- `npm run lint` — run ESLint
+- `npm run preview` — preview the production build locally
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Tech stack
 
-## What technologies are used for this project?
+- [Vite](https://vitejs.dev/)
+- [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [React Router](https://reactrouter.com/)
+- [Tailwind CSS](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/)
+- [Supabase](https://supabase.com/) client (`src/integrations/supabase`)
 
-This project is built with:
+## Project structure
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```
+src/
+  pages/        route-level page components
+  components/   shared components (components/ui holds shadcn/ui primitives)
+  hooks/        custom React hooks
+  lib/          utilities
+  integrations/ third-party clients (Supabase)
+```
 
-## How can I deploy this project?
+Routes are declared in [src/App.tsx](src/App.tsx). New routes must be added above the catch-all `*` route.
 
-Simply open [Lovable](https://lovable.dev/projects/ca5415a9-35b0-44a4-a572-1e1bc51fcf6b) and click on Share -> Publish.
+## Deployment
 
-## Can I connect a custom domain to my Lovable project?
+Netlify builds `main` automatically (see [netlify.toml](netlify.toml)): `npm run build`, publishing `dist/`. GitHub Actions ([.github/workflows/ci.yml](.github/workflows/ci.yml)) runs lint, a TypeScript check, the build, a dependency audit, and a secret scan on every push and pull request against `main`.
 
-Yes, you can!
+## Contributing
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- Work on a feature branch; never commit directly to `main`.
+- Run `npm run lint` and `npm run build` before committing.
+- Keep changes minimal — avoid unrelated restyling or copy rewrites.
+- Never commit `.env` files, tokens, or keys.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+See [CLAUDE.md](CLAUDE.md) for the full set of rules followed when editing this repo with AI assistance.
