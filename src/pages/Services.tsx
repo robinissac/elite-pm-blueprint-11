@@ -1,6 +1,8 @@
 
 import { Link } from "react-router-dom";
 
+const CONTACT_WHATSAPP_LINK = "https://wa.me/971565879821?text=Hi%20Robin%2C%20I%20am%20interested%20in%20your%20services";
+
 const Services = () => {
   return (
     <div className="min-h-screen">
@@ -161,13 +163,6 @@ const Services = () => {
           left: 0;
         }
 
-        .service-price {
-          font-size: 32px;
-          font-weight: 700;
-          color: #D2B48C;
-          margin-bottom: 24px;
-        }
-
         .service-button {
           background: #D2B48C;
           color: #000;
@@ -310,8 +305,10 @@ const Services = () => {
                 <li>Leadership psychology training</li>
                 <li>Unlimited email support</li>
               </ul>
-              <div className="service-price">$100</div>
-              <a href="#" className="service-button">Get Started</a>
+              <a href={CONTACT_WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="service-button" style={{ marginBottom: "16px" }}>
+                Contact me now on WhatsApp
+              </a>
+              <a href={CONTACT_WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="service-button">Get Started</a>
             </div>
 
             {/* Service 2 */}
@@ -326,8 +323,10 @@ const Services = () => {
                 <li>Team training included</li>
                 <li>6-month follow-up support</li>
               </ul>
-              <div className="service-price">$100</div>
-              <a href="#" className="service-button">Transform Now</a>
+              <a href={CONTACT_WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="service-button" style={{ marginBottom: "16px" }}>
+                Contact me now on WhatsApp
+              </a>
+              <a href={CONTACT_WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="service-button">Transform Now</a>
             </div>
 
             {/* Service 3 */}
@@ -342,8 +341,10 @@ const Services = () => {
                 <li>Process optimization</li>
                 <li>Quarterly strategy reviews</li>
               </ul>
-              <div className="service-price">$100</div>
-              <a href="#" className="service-button">Discuss Project</a>
+              <a href={CONTACT_WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="service-button" style={{ marginBottom: "16px" }}>
+                Contact me now on WhatsApp
+              </a>
+              <a href={CONTACT_WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="service-button">Discuss Project</a>
             </div>
 
             {/* Service 4 */}
@@ -358,8 +359,10 @@ const Services = () => {
                 <li>Guest expert sessions</li>
                 <li>Private community access</li>
               </ul>
-              <div className="service-price">$100</div>
-              <a href="#" className="service-button">Join Mastermind</a>
+              <a href={CONTACT_WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="service-button" style={{ marginBottom: "16px" }}>
+                Contact me now on WhatsApp
+              </a>
+              <a href={CONTACT_WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="service-button">Join Mastermind</a>
             </div>
 
             {/* New Service 5 - Monthly Subscription */}
@@ -374,8 +377,10 @@ const Services = () => {
                 <li>Exclusive resource downloads</li>
                 <li>Community forum access</li>
               </ul>
-              <div className="service-price">$1/month</div>
-              <a href="#" className="service-button">Subscribe Now</a>
+              <a href={CONTACT_WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="service-button" style={{ marginBottom: "16px" }}>
+                Contact me now on WhatsApp
+              </a>
+              <a href={CONTACT_WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="service-button">Subscribe Now</a>
             </div>
           </div>
 
