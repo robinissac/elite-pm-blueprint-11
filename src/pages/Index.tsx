@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 const WHATSAPP_LINK = "https://chat.whatsapp.com/BVUSqeP38TeLholBLRrkY1";
+const CONTACT_WHATSAPP_LINK = "https://wa.me/971565879821?text=Hi%20Robin%2C%20I%20found%20you%20on%20robinissac.com";
 
 const Index = () => {
   return (
@@ -417,6 +418,11 @@ const Index = () => {
               Join the Free WhatsApp Session
             </a>
           </div>
+          <div className="hero-cta-wrapper" style={{ marginTop: "16px" }}>
+            <a href={CONTACT_WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="cta-button">
+              Contact me now on WhatsApp
+            </a>
+          </div>
           <p className="hero-note">
             All updates, links, and offers are shared inside this single WhatsApp group so you stay in one focused place.
           </p>
@@ -464,7 +470,7 @@ const Index = () => {
       {/* Core programs and offers */}
       <section className="section">
         <div className="container">
-          <h2 className="section-title">Programs and limited time offers</h2>
+          <h2 className="section-title">Programs</h2>
           <p className="section-subtitle">
             Start with the free WhatsApp session. When you are ready to go deeper, choose one of these paths. All enrollments
             and questions flow through the same WhatsApp group.
@@ -485,9 +491,6 @@ const Index = () => {
                 <li>Checklists and templates you can reuse.</li>
                 <li>AI prompts for planning, risk, and communication.</li>
               </ul>
-              <div className="price-row">
-                <span className="price">9 USD</span>
-              </div>
               <p className="limited-note">Best first step after you attend the free WhatsApp session.</p>
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="cta-button">
                 Get link inside WhatsApp
@@ -496,7 +499,6 @@ const Index = () => {
 
             {/* Lifetime membership */}
             <div className="product-card">
-              <span className="badge">50 percent launch offer</span>
               <div className="product-mockup">🏆</div>
               <h3>Elite PM Academy Lifetime Membership</h3>
               <p>
@@ -508,15 +510,8 @@ const Index = () => {
                 <li>Monthly live calls for Q and A and hot seat reviews.</li>
                 <li>Expanded AI PM toolkit with workflows and real project case studies.</li>
               </ul>
-              <div className="price-row">
-                <span className="price">100 USD</span>
-                <span className="price-old">200 USD</span>
-              </div>
-              <p className="limited-note">
-                Current launch price is 50 percent off the original 200 USD. Mentioned only inside the WhatsApp community.
-              </p>
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="cta-button">
-                Claim offer inside WhatsApp
+                Ask about this program
               </a>
             </div>
           </div>
@@ -536,13 +531,6 @@ const Index = () => {
                 <li>Peer support and networking with other PMs.</li>
                 <li>Focus on implementation rather than theory.</li>
               </ul>
-              <div className="price-row">
-                <span className="price">100 USD</span>
-                <span className="price-old">200 USD</span>
-              </div>
-              <p className="limited-note">
-                Limited seats each cycle. Early members lock this 50 percent rate while it is available.
-              </p>
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="cta-button">
                 Apply through WhatsApp
               </a>
@@ -562,13 +550,6 @@ const Index = () => {
                 <li>Design of PM and AI PM frameworks tailored to your context.</li>
                 <li>Leadership and team training sessions.</li>
               </ul>
-              <div className="price-row">
-                <span className="price">1 000 USD</span>
-              </div>
-              <p className="consult-note">
-                Final pricing and scope is confirmed after a short WhatsApp or Zoom conversation. Contact Robin through the
-                WhatsApp group for a better custom deal.
-              </p>
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="cta-button">
                 Discuss project on WhatsApp
               </a>
@@ -639,6 +620,11 @@ const Index = () => {
               className="social-link"
             >
               YouTube: @RobinIssac007 AI PM
+            </a>
+          </div>
+          <div className="hero-cta-wrapper" style={{ marginBottom: "32px" }}>
+            <a href={CONTACT_WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="cta-button">
+              Contact me now on WhatsApp
             </a>
           </div>
           <p className="footer-text">Built by Robin Issac. Execution is your superpower.</p>
