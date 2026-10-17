@@ -131,6 +131,17 @@ const Index = () => {
           transform: translateY(-2px);
         }
 
+        .cta-button:focus-visible {
+          outline: 3px solid #D2B48C;
+          outline-offset: 3px;
+        }
+
+        .hero-cta-primary {
+          font-size: 18px;
+          padding: 20px 40px;
+          margin: 40px 0 24px;
+        }
+
         .section {
           padding: 80px 0;
         }
@@ -410,22 +421,20 @@ const Index = () => {
         <div className="container">
           <h1>Build, Lead, and Scale with AI Enhanced Project Leadership</h1>
           <p>
-            Join Robin Issac in a free 80 minute WhatsApp session on AI powered project management. Learn how to
-            execute projects with clarity, speed, and psychological strength.
+            Chat with Robin Issac on WhatsApp about AI powered project management. Learn how to execute projects
+            with clarity, speed, and psychological strength.
           </p>
           <div className="hero-cta-wrapper">
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="cta-button">
-              Join the Free WhatsApp Session
-            </a>
-          </div>
-          <div className="hero-cta-wrapper" style={{ marginTop: "16px" }}>
-            <a href={CONTACT_WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="cta-button">
+            <a
+              href={CONTACT_WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-button hero-cta-primary"
+            >
               Contact me now on WhatsApp
             </a>
           </div>
-          <p className="hero-note">
-            All updates, links, and offers are shared inside this single WhatsApp group so you stay in one focused place.
-          </p>
+          <p className="hero-note">Message me directly on WhatsApp and I will reply personally.</p>
         </div>
       </section>
 
